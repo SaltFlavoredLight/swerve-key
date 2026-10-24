@@ -9,7 +9,7 @@ import org.littletonrobotics.junction.AutoLog
 
 
 
-interface SwevreIO {
+interface SwerveIO {
     @AutoLog
     open class ExampleIOInputs {
         @JvmField var velocityTurn: Double = 0.0
@@ -29,6 +29,11 @@ interface SwevreIO {
     fun updateAppliedVoltageDrive(voltage: Double)
 
     fun updateInputs(inputs: ExampleIOInputs)
+
+
+    fun getPositionTurn()
+    fun getVoltageTurn()
+    fun getAngleVelocityTurn()
 }
 
 

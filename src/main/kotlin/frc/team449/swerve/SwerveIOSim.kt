@@ -3,12 +3,11 @@ package frc.team449.swerve
 import edu.wpi.first.math.geometry.Rotation2d
 import edu.wpi.first.math.system.plant.DCMotor
 import edu.wpi.first.math.system.plant.LinearSystemId
-import edu.wpi.first.units.Units
 import edu.wpi.first.wpilibj.simulation.DCMotorSim
-import frc.team449.swerve.SwevreIO.ExampleIOInputs
+import frc.team449.swerve.SwerveIO.ExampleIOInputs
 
 
-class SwerveIOSim : SwevreIO {
+class SwerveIOSim : SwerveIO {
     // this is an example of the DC moter Sim
     val turnMotor: DCMotorSim =
         DCMotorSim(

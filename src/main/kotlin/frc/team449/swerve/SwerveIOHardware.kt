@@ -4,12 +4,11 @@ import com.ctre.phoenix6.controls.VelocityVoltage
 import com.ctre.phoenix6.hardware.TalonFX
 import edu.wpi.first.math.geometry.Rotation2d
 import edu.wpi.first.units.Units
-import frc.team449.swerve.SwevreIO.ExampleIOInputs
+import frc.team449.swerve.SwerveIO.ExampleIOInputs
 
-class SwerveIOHardware(turnPort:Int, speedPort:Int) : SwevreIO {
+class SwerveIOHardware(turnPort:Int, speedPort:Int) : SwerveIO {
     private val turnMotor = TalonFX(turnPort)
     private val driveMotor = TalonFX(speedPort)
-
 
     override fun updateVelocityTurn(velocity: Double) {
         turnMotor.setControl(VelocityVoltage(velocity))
