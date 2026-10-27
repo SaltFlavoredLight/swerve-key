@@ -4,8 +4,6 @@ import edu.wpi.first.math.geometry.Rotation2d
 import edu.wpi.first.math.system.plant.DCMotor
 import edu.wpi.first.math.system.plant.LinearSystemId
 import edu.wpi.first.wpilibj.simulation.DCMotorSim
-import frc.team449.swerve.SwerveIO.ExampleIOInputs
-
 
 class SwerveIOSim : SwerveIO {
     // this is an example of the DC moter Sim
@@ -46,7 +44,7 @@ class SwerveIOSim : SwerveIO {
         speedMotor.setInputVoltage(voltage)
     }
 
-    override fun updateInputs(inputs: ExampleIOInputs) {
+    override fun updateInputs(inputs: SwerveIO.SwerveIOInputs) {
         inputs.velocityTurn = turnMotor.angularVelocityRadPerSec
         inputs.appliedVoltageTurn = turnMotor.inputVoltage
         inputs.angleTurn = Rotation2d(turnMotor.angularPositionRad)
