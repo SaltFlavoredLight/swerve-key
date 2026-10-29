@@ -27,9 +27,9 @@ class SwerveSubsystem(private val io: SwerveIO) : SubsystemBase() {
         }
     }
 
-    fun setDriveVoltage(voltage: Double): Command =
+    fun setDriveVelocity(voltage: Double): Command =
         runOnce {
-            io.updateAppliedVoltageDrive(voltage)
+            io.updateVelocityDrive(voltage)
         }
 
     fun stopMotor(): Command =
